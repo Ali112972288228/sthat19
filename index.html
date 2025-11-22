@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>سطحات غرب الرياض</title>
+  <style>
+    :root{
+      --red:#c71b1b;
+      --black:#0b0b0b;
+      --muted:#222;
+      --glass: rgba(0,0,0,0.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: 'Segoe UI', Tahoma, "Helvetica Neue", Arial, sans-serif;background:var(--black);color:#fff}
+
+    /* Hero / background slideshow */
+    .hero{
+      position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .slides{position:absolute;inset:0;z-index:0}
+    .slide{position:absolute;inset:0;background-position:center;background-size:cover;filter:contrast(1.02) saturate(1.05);opacity:0;transition:opacity 1s ease-in-out}
+    .slide.active{opacity:1}
+
+    /* dark gradient overlay to keep text readable */
+    .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.7));z-index:1}
+
+    .content{position:relative;z-index:2;text-align:center;padding:2rem;width:min(1100px,95%)}
+    h1{font-size:clamp(26px,6vw,56px);margin:0 0 0.5rem;color:var(--red);text-shadow:0 4px 20px rgba(0,0,0,0.6)}
+    p.lead{margin:0 0 1.2rem;color:#eee;font-size:clamp(14px,2.6vw,18px)}
+
+    .contact-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .cta{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 1.2rem;border-radius:10px;border:none;cursor:pointer;font-weight:600;text-decoration:none}
+    .call{background:linear-gradient(180deg,var(--red),#7f0f0f);color:#fff;box-shadow:0 6px 18px rgba(199,27,27,0.25)}
+    .wa{background:linear-gradient(180deg,#0a9b3e,#077b2f);color:#fff;box-shadow:0 6px 18px rgba(5,80,40,0.18)}
+
+    .info-box{margin-top:1.25rem;background:var(--glass);padding:0.9rem 1rem;border-radius:12px;display:inline-block}
+    .info-box small{opacity:0.85}
+
+    /* footer */
+    footer{position:relative;z-index:2;text-align:center;padding:1rem 0;color:#bbb}
+
+    /* small devices tweaks */
+    @media(min-width:900px){
+      .contact-row{gap:1.5rem}
+    }
+
+    /* simple slide dots */
+    .dots{position:absolute;left:1rem;bottom:1rem;z-index:3;display:flex;gap:0.6rem}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer}
+    .dot.active{background:var(--red)}
+      .wa{position:relative;overflow:hidden;padding-inline-start:1.6rem;padding-inline-end:1.2rem}
+    /* icon inside the whatsapp button (uses the image you provided) */
+    .wa .icon{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:8px;background-image:url('https://share.google/H9Ipb9VGpaKBi2TrT');background-size:cover;background-position:center;opacity:0.55;filter:contrast(0.95);}
+    /* subtle colored overlay on top of the image so button still reads as green */
+    .wa .icon::after{content:"";position:absolute;inset:0;border-radius:8px;background:linear-gradient(180deg, rgba(10,155,62,0.35), rgba(7,123,47,0.45));}
+    .wa .number{margin-inline-start:0.6rem}
+
+    /* motivational cards */
+    .motivation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:1rem}
+    .mot-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:0.9rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);font-weight:700;color:#fff;text-align:center}
+
+    .short-desc{margin-top:1rem;background:rgba(0,0,0,0.45);padding:0.9rem;border-radius:12px;color:#ddd}
+
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <!-- ضع رابط صورتك هنا بدل tow1.jpg و tow2.jpg -->
+    <div class="slides" aria-hidden="true">
+      <!-- مثال: background-image:url('https://example.com/your-image.jpg') -->
+      <div class="slide active" style="background-image:url(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)"></div>
+      <div class="slide" style="background-image:url(https://images.hammilha.com/images/6735300028ede.jpeg)"></div>
+    </div>
+      <div class="slide" style="background-image:url('https://d2pi0n2fm836iz.cloudfront.net/353310/0119202309095863c908e6cdc43.jpg')"></div>
+    </div>
+
+    <div class="overlay" aria-hidden="true"></div>
+
+    <div class="content">
+      <h1>سطحات غرب الرياض</h1>
+      <p class="lead">نقل سيارات — اتصال عادي وواتساب متاحان على نفس الرقم. خدمات سريعة وآمنة على مدار الساعة.</p>
+
+      <div class="contact-row">
+        <!-- Call button -->
+        <a class="cta call" href="tel:+966573595308" aria-label="اتصال هاتفي">📞 اتصال مباشر
+          <span style="font-size:0.9rem;opacity:0.95">+966 57 359 5308</span>
+        </a>
+
+        <!-- WhatsApp button with image icon inside the button -->
+        <a class="cta wa" href="https://wa.me/966573595308" target="_blank" rel="noopener" aria-label="فتح واتساب">🟢 واتساب
+          <span class="number" style="font-size:0.9rem;opacity:0.95">+966 57 359 5308</span>
+          <span class="icon" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!-- مربعات تحفيزية -->
+      <div class="motivation-grid" role="list">
+        <div class="mot-card" role="listitem">نحن الأسرع</div>
+        <div class="mot-card" role="listitem">الأفضل</div>
+        <div class="mot-card" role="listitem">خدمة 24/7</div>
+        <div class="mot-card" role="listitem">أسعار تنافسية</div>
+      </div>
+
+      <!-- وصف قصير عن الشغل -->
+      <div class="short-desc">
+        نقدم خدمات سطحات ونقل مركبات احترافية في غرب الرياض: سحب، شحن، ونقل آمن وسريع بفرق مدربة ومعدات حديثة.
+      </div>
+
+      <div class="info-box" role="status" aria-live="polite">
+        <small>مهم: اضغط زر الاتصال لإجراء مكالمة أو زر واتساب لفتح المحادثة مباشرة.</small>
+      </div>
+    </div>
+
+    <div class="dots" aria-hidden="true">
+      <div class="dot active" data-i="0"></div>
+      <div class="dot" data-i="1"></div>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> سطحات غرب الرياض — الرقم: <strong>+966 57 359 5308</strong>
+  </footer>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple slideshow logic
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let cur = 0;
+    function show(i){
+      slides.forEach((s,idx)=> s.classList.toggle('active', idx===i));
+      dots.forEach((d,idx)=> d.classList.toggle('active', idx===i));
+      cur = i;
+    }
+    dots.forEach(d=> d.addEventListener('click', ()=> show(Number(d.dataset.i))));
+
+    // auto-rotate every 6s
+    setInterval(()=> show((cur+1) % slides.length), 6000);
+
+    // Enhance WhatsApp button for mobile desktops
+    const waBtn = document.querySelector('.wa');
+    waBtn.addEventListener('click', ()=> {
+      // analytics hook or custom behaviour could go here
+    });
+
+    // Accessibility: keyboard navigation for dots
+    dots.forEach(d=>{
+      d.tabIndex = 0;
+      d.addEventListener('keydown', e=>{
+        if(e.key === 'Enter' || e.key === ' ') show(Number(d.dataset.i));
+      });
+    });
+  </script>
+</body>
+</html>
